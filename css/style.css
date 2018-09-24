@@ -1,0 +1,65 @@
+body {
+  background-color: #f8f8f8;
+  color: #333;
+  counter-reset: page;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: grayscale;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+main {
+  margin: 0 auto;
+  max-width: 30em;
+  padding: 1em;
+}
+
+.msg-list__page {
+  border-top: 1px solid #ddd;
+  clear: both;
+  counter-increment: page;
+  padding-bottom: 3em;
+  position: relative;
+}
+
+.lableDate {
+  background-color: rgb(132, 171, 255);
+  display: inline-block;
+  content: attr(data-currentDate);
+  color: rgb(255, 255, 255);
+  padding: 0.15em .5em;
+  position: absolute;
+  left: calc(42%);
+  top: -1em;
+  vertical-align: middle;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.msg-list__item {
+  background-color: #fbd8d8;
+  max-width: 100%;
+  opacity: .75;
+  list-style: none;
+  border-radius: 8px;
+  padding: 22px;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  transition: opacity 0.2s, -webkit-transform 0.2s;
+  transition: opacity 0.2s, transform 0.2s;
+  transition: opacity 0.2s, transform 0.2s, -webkit-transform 0.2s;
+
+}
+
+.msg-list__item:hover {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+
+.dateformat {
+  background: rgb(255, 255, 255);
+  padding: 2px;
+  border-radius: 3px;
+}
